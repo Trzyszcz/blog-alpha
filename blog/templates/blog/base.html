@@ -1,19 +1,35 @@
+<!DOCTYPE html>
+
 {% load staticfiles%}
-<html>
+
+<html lang="en">
 	<head>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<meta charset="utf-8" />
+
 		<title>Some blog</title>
+	
 	</head>
 
 	<body>
-		<div class="page-header">
+		<div class='jumbotron'>
+			
 			<h1><a href="/">Some blog</a></h1>
+			
 		</div>
-
-		{% block content %}
-		{% endblock %}
-	
+		
+		<div class='container'>
+			<div class='row'>
+				<div class='col-sm-9'>
+					{% block content %}
+					{% endblock %}
+				</div>
+				<div class='col-sm-3'>	
+					<p><b><i>Gmail</i></b> <a href='marcel.windys@gmail.com'>marcel.windys@gmail.com</a></p>
+					<p><b><i>GitHub</i></b> <a href='https://github.com/Trzyszcz'>https://github.com/Trzyszcz</a></p>
+				</div>
+			</div>
 	</body>
 </html>
