@@ -12,7 +12,7 @@ body {
 	font-family: 'Times New Roman';	
 }
 
- .jumbotron {
+.jumbotron {
 	color: white;
 	margin-top 0;
 	padding: 20px 20px 20px 40px;
@@ -23,3 +23,6 @@ body {
 	padding-left: 15px;
 }
 
+ {
+	float: right;
+}
