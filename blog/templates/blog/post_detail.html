@@ -3,16 +3,19 @@
 {% block content %}
 	<div class="post">
 		<div class='row'>
-			<div class='col-sm-9'>
+			<div class='col-sm-7'>
 				{% if post.published_date %}
 					<div class="date">
 						{{ post.published_date }}
 					</div>
 				{% endif %}
 			</div>
-			<div class='col-sm-1'>
+			<div class='col-sm-3'>
 				{% if user.is_authenticated %}
 					<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+				{% endif %}
+				{% if user.is_authenticated %}
+					<a class="btn btn-default" href="{% url 'post_delete' pk=post.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
 				{% endif %}
 			</div>
 		</div>
